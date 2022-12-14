@@ -33,7 +33,7 @@ fun HomeScreen(
             addRecipeViewModel = viewModel,
         )
     }){
-        MainContent(navController = navController, addQRViewModel = viewModel, qrs = qr)}
+        MainContent(navController = navController, addQRViewModel = viewModel, qrs = viewModel.addedQR)}
     }
 
 
@@ -41,7 +41,7 @@ fun HomeScreen(
 fun MainContent(
     navController: NavController,
     addQRViewModel: AddQRViewModel,
-    qrs: List<QR> = getQR(),
+    qrs: List<QR>,
 ){
     LazyColumn{
         items(qrs){ qr ->

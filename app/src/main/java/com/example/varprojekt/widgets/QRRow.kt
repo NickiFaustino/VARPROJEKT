@@ -45,7 +45,7 @@ fun QRRow(
                         .width(250.dp)
                 ) {
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(qr.id)
+                    qr.id?.let { Text(it) }
                     qr.title?.let { Text(it) }
                     qr.description?.let { Text(it) }
                 }
