@@ -1,7 +1,7 @@
 package com.example.varprojekt.models
 
 data class QR(
-    val id: String?,
+    var id: String?,
     var title: String?,
     val description: String?,
     val time: String?,

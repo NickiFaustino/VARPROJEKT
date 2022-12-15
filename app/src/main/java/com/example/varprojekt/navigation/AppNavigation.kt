@@ -27,7 +27,7 @@ fun AppNavigation(){
 
         }
         composable(AppScreens.AddQRScreen.name){
-            AddQRScreen(navController = navController, addQRViewModel, qr = createQR())
+            AddQRScreen(navController = navController, addQRViewModel)
         }
         composable(
             route = AppScreens.DetailScreen.name + "/{id}",

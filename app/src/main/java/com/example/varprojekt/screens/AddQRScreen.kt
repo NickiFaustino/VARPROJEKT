@@ -39,7 +39,7 @@ import java.lang.Exception
 fun AddQRScreen(
     navController: NavController = rememberNavController(),
     viewModel: AddQRViewModel,
-    qr: QR
+    addNewQR: (QR) -> Unit = {}
 
 ) {
     Scaffold(
@@ -98,8 +98,14 @@ fun AddQRScreen(
                             ContextCompat.getMainExecutor(context),
                             QrCodeAnalyzer { result ->
                                 code = result
-                                qr.title = code
-                                viewModel.addQR(qr)
+                                val newQR = QR(
+                                    id = code,
+                                    title = "",
+                                    description = "",
+                                    time = "",
+                                )
+                                viewModel.addQR(newQR)
+                                addNewQR(newQR)
                             }
                         )
                         try {

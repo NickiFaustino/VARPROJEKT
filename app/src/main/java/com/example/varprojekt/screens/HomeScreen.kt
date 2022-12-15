@@ -33,7 +33,7 @@ fun HomeScreen(
             addRecipeViewModel = viewModel,
         )
     }){
-        MainContent(navController = navController, addQRViewModel = viewModel, qrs = viewModel.addedQR)}
+        MainContent(navController = navController, addQRViewModel = viewModel, qrs = viewModel.addedQR)} //qr wenn ohne ViewModel
     }
 
 

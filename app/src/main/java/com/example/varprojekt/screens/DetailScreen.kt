@@ -30,7 +30,7 @@ fun DetailScreen(
     id: String,
     viewModel: AddQRViewModel
 ){
-    val qr = filterQR(id = id, qr = getQR())
+    val qr = filterQR(id = id, qr = viewModel.addedQR) //víewModel.addedQR wenn mit Viewmodel
 
     Scaffold(
         topBar = { SimpleTopAppBar(arrowBackClicked = {navController.popBackStack()}) {
